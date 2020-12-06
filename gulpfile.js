@@ -3,6 +3,7 @@ const del = require("del");
 const csso = require('gulp-csso');
 const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify-es').default;
+const image = require('gulp-image');
 
 function cleanTask() {
   return del("dist");
@@ -29,6 +30,7 @@ function scriptsTask() {
 
 function imagesTask() {
   return src("src/images/*")
+    .pipe(image())
     .pipe(dest("dist/images"));
 }
 
