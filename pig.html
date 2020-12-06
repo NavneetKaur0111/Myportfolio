@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pig | Blog | Navneet</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/blogStyle.css" />
+    <link rel="stylesheet" href="styles/sanitize.css" />
+    <script defer src="scripts/portfolio.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ce98c3304a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="images/myLogocopy.png" type="image/png" />
+  </head>
+  <body>
+    <nav></nav>
+    <section class="pig main">
+      <div class="arrows">
+        <a href="bhabhi.html"> <i class="fas fa-chevron-left"></i></a>
+        <a href="loops.html"><i class="fas fa-chevron-right"></i></a>
+      </div>
+      <h1>Pig- dice game</h1>
+      <span class="posted-info">posted on Nov. 9, 2020 by Navneet</span>
+      <figure>
+        <img src="images/pigGame.png" alt="interface for pig Game" />
+        <figcaption>Fig1: Interface for pig game</figcaption>
+      </figure>
+      <div class="content">
+        <p>
+          Pig is a dice game played by two players. The best thing about the
+          game is the player can roll the dice as many times as they want. The
+          twist is if you get 1 on any of the two dies, you lose all the current
+          scores, and the turn is switched to other player. Below is a diagram
+          explaining the working of the game:
+        </p>
+        <figure>
+          <img
+            src="images/Pig-diagram.png"
+            alt="logic for how pig game works"
+            width="40%"
+          />
+          <figcaption>Fig2: Logic for Pig game</figcaption>
+        </figure>
+        <p>
+          I worked with my two friends on this project. To write a working code,
+          all we need is logic and syntax. In this game, we started with rolling
+          both dies. We accomplished that by generating two random numbers from
+          1 to 6. Then, add them up and sort them in the current score. To make
+          rolling the dice more realistic, we used pictures to represent numbers
+          on the dice. It was a little tricky for us to change the dice picture
+          by changing the path of the image source according to the random
+          number we got. But finally, after some hard work, we figured that out.
+        </p>
+        <pre>
+     
+          function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max + 1 - min)) + min;
+          }
+        </pre>
+        <p>
+          When any of the random numbers generated is 1, then the current score
+          becomes 0 and the player's turn get switched. There are some different
+          styles to show which player is active. Whenever the user clicks on the
+          hold button, the active player is changed. There is a switch function
+          which changes the style of both the players. The diagram below
+          explains when the switched function is evoked and what does it do.
+        </p>
+        <figure>
+          <img
+            src="images/switch-the-turn -diagram.png"
+            alt="picture for logic of switching the turn in pig game"
+            width="45%"
+          />
+          <figcaption>Fig3: Logic for switching the turn</figcaption>
+        </figure>
+        <p>
+          Working on reset was very easy for this project. It was just finding
+          the score boxes for both the players and changing the text content of
+          every score into 0. We can get the score box content by giving
+          different id names to the boxes and then searching for those names
+          when we want. It was quite easy and interesting.
+        </p>
+        <pre>
+          function reset() {
+            let playerTotalScore = document.querySelectorAll(".player-score");
+            let currentPlayerScore = document.querySelectorAll(".player-current-score");
+            for (let x = 0; x < 2; x++) {
+              playerTotalScore[x].textContent = 0;
+              currentPlayerScore[x].textContent = 0;
+            }
+          }
+        </pre>
+        <p>
+          Adding the current score into the total score when the user clicks
+          hold was a little tricky. All we need to do is take the content from
+          the current score and add it into the total score and set the current
+          score to 0, but it took some time to do that. The code below
+          represents all we did to add the score
+        </p>
+        <pre>
+          function addScore() {
+            let playerCurrScore = document.querySelector(".active .player-current-score");
+            let playerTotalScore = document.querySelector(".active .player-score");
+            let totalscore = parseInt(playerTotalScore.textContent);
+            totalscore += parseInt(playerCurrScore.textContent);
+            playerTotalScore.textContent = totalscore;
+            playerCurrScore.textContent = 0;
+          }
+        </pre>
+        <p>
+          In coding projects, you can barely write working code without any
+          silly errors. Some little errors will always be there and the same
+          happened with us, but we checked all the fine details of the program
+          and we got the error that we were not changing the string (alphabetic
+          number) into integer (mathematic number). That is why I like peer
+          programming. When somebody sees you coding, they can easily find the
+          error when you are not seeing i
+        </p>
+        <p class="conclusion">
+          So, this is how we worked on this Pig Game. I think after this, you
+          have a little idea about how coding can be done for a game project. If
+          you want to know more, you can start learning from ‘HTML and CSS’ page
+          in this portfolio.
+        </p>
+      </div>
+    </section>
+    <footer></footer>
+  </body>
+</html>

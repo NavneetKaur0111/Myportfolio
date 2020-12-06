@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops&iterations | Blog | Navneet</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/blogStyle.css" />
+    <link rel="stylesheet" href="styles/sanitize.css" />
+    <script defer src="scripts/portfolio.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ce98c3304a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="images/myLogocopy.png" type="image/png" />
+  </head>
+  <body>
+    <nav></nav>
+    <section class="loop main">
+      <div class="arrows">
+        <a href="pig.html"> <i class="fas fa-chevron-left"></i></a>
+        <a href="ssl.html"><i class="fas fa-chevron-right"></i></a>
+      </div>
+      <h1>Javascript loops and iterations</h1>
+      <span class="posted-info">posted on Nov. 16, 2020 by Navneet</span>
+      <img
+        src="images/javascript-loops.jpg"
+        alt="an image to represent loops"
+      />
+      <div class="content">
+        <p>
+          Do you face difficulties while using loops in JavaScript? If yes, then
+          you are at the right place. After reading this article, you will
+          understand what each of those loops are doing.
+        </p>
+        <p>
+          Let’s start with understanding the meaning of a loop in JavaScript.
+          Loop is a special command that allows us to do something repeatedly.
+          Everytime the code in the loop is executed, it is called the iteration
+          of a loop. A loop like a GIF image, do the same thing repeatedly.
+        </p>
+        <p>There are five different types of loops in JavaScript:</p>
+        <ul class="loops-list">
+          <li><a href="#while">While loop</a></li>
+          <li><a href="#do-while">Do while loop</a></li>
+          <li><a href="#for">For loop</a></li>
+          <li><a href="#for-of">For of loop</a></li>
+          <li><a href="#for-in">For in loop</a></li>
+        </ul>
+
+        <div id="while">
+          <h2>While loop</h2>
+          <h3>Syntax-</h3>
+          <pre>
+            while(condition) {
+              Statements
+            }         
+          </pre>
+          <p>
+            In the “while” loop, a set of statements executes until a specific
+            condition is true. Before executing the code, a condition is
+            checked. If the test condition evaluates to true, code is executed.
+            A very light example is eating until you are full. Before having a
+            bite, check if you are not full. Similarly, before executing the
+            code, check if the condition is true.
+          </p>
+          <h3>Example</h3>
+          <pre>
+            const i = 0;
+            while ( i > 0){
+              console.log(‘value of i is’ + i);
+            }
+
+            output-
+             
+          </pre>
+        </div>
+
+        <div id="do-while">
+          <h2>Do while loop</h2>
+          <h3>Syntax-</h3>
+          <pre>
+          	do{
+          	  statements
+          	} while (condition);                     
+          </pre>
+          <p>
+            In the “do while” loop, the computer executes the code once at least
+            before the condition is checked. If the condition evaluates to true,
+            code gets executed again or else the loop will stop.
+          </p>
+          <h3>Example-</h3>
+          <pre>
+          	const i = 0;
+            	do {
+            	  console.log(‘value of i is ‘ + i );
+              } while ( i < 5);  
+              
+            output- 
+              value of i is 0
+              . 
+              . 
+              value of i is 5
+          </pre>
+          <p>
+            In the above example, computer will log ‘value of i is 0’. Then it
+            will check the condition ‘i > 0’ which will evaluate to false and
+            loop will stop. Hence, the set of statements will execute at least
+            once.
+          </p>
+        </div>
+
+        <div id="for">
+          <h2>For loop</h2>
+          <h3>Syntax-</h3>
+          <pre>
+            	for([initialize expression]; [condition]; [increment expression]) {
+            	  statements
+            	}                     
+          </pre>
+          <p>
+            In the “for” loop, you can initialize an expression ( let i = 0 )
+            and in every iteration, you can update that expression . You can
+            skip the initialization of an expression and just put a semi-colon
+            instead. Like “while” loop, a “for” loop is also executed until the
+            condition is true.
+          </p>
+          <h3>Example-</h3>
+          <pre>
+          	for(let i = 0; i < 10; i++){
+          	  console.log( i + ‘ is less than 10.’);
+            }    
+            
+            output-
+              0 is less than 10.
+              .
+              .
+              .
+              9 is less than 10.
+          </pre>
+          <p>
+            In the above example, a variable “i” is initialized, and is
+            incremented in every iteration. A condition is checked that if “i”
+            is less than 10, then execute the code.
+          </p>
+        </div>
+
+        <div id="for-of">
+          <h2>For of loop</h2>
+          <h3>Syntax-</h3>
+          <pre>
+          	for(let item of array){
+          	  statements
+          	}                                  
+          </pre>
+          <p>
+            The “for of loop” is a special loop that iterates over an array of
+            items and executes the set of statements for every particular item.
+          </p>
+          <h3>Example-</h3>
+          <pre>
+          	const basket = [‘apple’, ‘banana’, ‘mango’, ‘kiwi’];
+       	    for(let fruit of basket) {
+          	  console.log(fruit);
+             }  
+             
+            output-
+              apple
+              banana
+              mango
+              kiwi
+            </pre
+          >
+          <p>
+            In the above example, there is an array of fruits called basket.
+            “For of loop” is iterating over all the items of the array and
+            logging them into the console.
+          </p>
+        </div>
+
+        <div id="for-in">
+          <h2>For in loop</h2>
+          <h3>Syntax-</h3>
+          <pre>
+          	for(let item in object){
+          	  statements
+          	}                                   
+          </pre>
+          <p>
+            The “for in” loop is a special loop, which iterates over an object
+            and execute the set of statements for that particular item.
+          </p>
+          <h3>Example-</h3>
+          <pre>
+          	const cart = {
+          	  Juice: 12,
+              Cake: 1,
+          	  Apples : 1,
+          	};
+            for(let items in cart){
+          	  console.log(item);
+            }   
+            
+            output-
+              12
+              1
+              1
+          </pre>
+          <p>
+            In the above example, there is an object named cart. The loop is
+            going over all the items in cart object one by one, and for every
+            item, the loop executes the code.
+          </p>
+        </div>
+
+        <p class="conclusion">
+          I hope after reading this article, you understand what all of these
+          loops in JavaScript do. Now, go ahead and play around with these loops
+          and have fun.
+        </p>
+      </div>
+    </section>
+    <footer></footer>
+  </body>
+</html>

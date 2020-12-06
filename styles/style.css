@@ -1,0 +1,321 @@
+body * {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+nav {
+  background-color: rgba(7, 7, 7, 0.87);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-wrapper {
+  width: 90%;
+}
+
+nav div {
+  display: inline-block;
+}
+
+.nav-heading {
+  width: 37%;
+}
+
+.nav-wrapper .nav-heading a img {
+  width: 130px;
+}
+
+.navigation {
+  text-align: right;
+  width: 40%;
+}
+
+.blogs-heading {
+  width: 15%;
+  display: inline-block;
+  text-align: center;
+  border-left: 3px solid white;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.blogs-heading a:hover {
+  color: rgb(248, 128, 85);
+  border-bottom: 2px solid rgb(248, 128, 85);
+}
+
+.blog-link {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.navigation ul {
+  display: inline-block;
+}
+
+.navigation ul li {
+  display: inline-block;
+}
+
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:active {
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 300;
+}
+.navigation ul li a:hover {
+  color: rgb(248, 128, 85);
+  border-bottom: 2px solid rgb(248, 128, 85);
+}
+
+.homepage-main {
+  width: 100%;
+}
+
+.homepage-main img {
+  width: 100%;
+  filter: brightness(0.6);
+  margin-bottom: 2rem;
+}
+
+.homepage-main p {
+  /* max-width: 80%;
+  margin: auto; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  margin: 0.2rem 0px;
+}
+
+.homepage-main .welcome-para {
+  padding-bottom: 5rem;
+  border-bottom: 2px solid black;
+  max-width: 80%;
+  margin: auto;
+}
+
+.homepage-main .recent-Posts {
+  max-width: 80%;
+  margin: auto;
+}
+
+.homepage-main .recent-Posts ul {
+  padding: 0px;
+}
+
+.homepage-main .recent-Posts ul li {
+  list-style-type: none;
+  border-bottom: 1px solid grey;
+  padding: 1rem;
+}
+
+.homepage-main .recent-Posts ul li a {
+  text-decoration: none;
+}
+.recent-Posts ul li a:link,
+.recent-Posts ul li a:visited,
+.recent-Posts ul li a:active {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.recent-Posts ul li a:hover {
+  color: rgb(248, 128, 85);
+}
+
+.recent-Posts ul li span {
+  display: block;
+  color: grey;
+}
+
+footer {
+  margin-top: 5rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(7, 7, 7, 0.87);
+}
+
+footer div {
+  color: white;
+}
+
+footer ul {
+  padding-left: 0;
+}
+
+footer ul li {
+  /* color: white; */
+  display: inline-block;
+}
+
+footer ul li a i {
+  color: white;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+footer ul li a:link,
+footer ul li a:visited,
+footer ul li a:active {
+  text-decoration: none;
+  padding: 0;
+}
+
+footer ul li a i:hover {
+  color: rgb(248, 128, 85);
+}
+
+/* BLOG */
+
+.blog-page-main {
+  margin-top: 5rem;
+}
+
+.blog-post-wrapper {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.blog-post {
+  margin: 1rem;
+  text-align: center;
+  padding: 5px;
+  border: 2px solid grey;
+  width: 30%;
+  max-width: 30%;
+}
+
+.blog-post img {
+  width: 100%;
+}
+
+.blog-post span {
+  color: grey;
+  font-size: 1rem;
+}
+
+.blog-post div {
+  font-weight: bold;
+}
+
+.blog-post p {
+  font-weight: lighter;
+}
+
+.blog-post a:link,
+.blog-post a:visited,
+.blog-post a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.blog-post a:hover {
+  color: rgb(124, 41, 10);
+}
+
+.blog-page-main .blog-page-header {
+  width: 80%;
+  max-width: 80%;
+  margin: auto;
+}
+
+.blog-page-main h1 {
+  font-size: 2rem;
+}
+
+/* ABOUT-ME */
+
+.about-me-main {
+  max-width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.about-me-main h1 {
+  font-size: 2rem;
+}
+
+.about-me-main img {
+  width: 35%;
+  float: left;
+  margin-right: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-me-main p {
+  font-size: 1.3rem;
+}
+
+.my-interests h2 {
+  font-size: 1.7rem;
+}
+
+.my-interests div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.my-interests div img {
+  max-width: 21%;
+}
+
+/* CONTACT */
+
+.contact-page-main {
+  max-width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.contact-page-main h1 {
+  font-size: 2rem;
+}
+
+.contact-page-main form {
+  width: 50%;
+  margin: auto;
+  margin-top: 5rem;
+  margin-right: 0rem;
+  /* float: right; */
+}
+
+.contact-page-main img {
+  float: left;
+  width: 32%;
+  margin: 5rem 1.5rem 5rem 0px;
+}
+
+.contact-page-main form .box {
+  width: 100%;
+  display: block;
+  margin: 10px 0;
+  padding: 20px;
+  background-color: rgba(11, 11, 41, 0.123);
+  border: none;
+  border-bottom: 2px solid rgb(66, 40, 22);
+  border-radius: 2px;
+}
+
+.contact-page-main button {
+  background-color: rgb(43, 43, 43);
+  color: rgb(243, 237, 233);
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  width: 30%;
+  margin: 2rem auto;
+}
+
+.contact-page-main button:hover {
+  color: rgb(43, 43, 43);
+  background-color: rgba(100, 100, 100, 0.712);
+}
